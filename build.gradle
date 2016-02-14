@@ -1,0 +1,39 @@
+group 'Selenium'
+version '1.0-SNAPSHOT'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.5'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+ //   testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
+  //  testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.50.1'
+    compile 'org.testng:testng:6.9.10'
+   // compile group: 'org.sikuli', name: 'sikuli-api', version: '1.0.+'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.+'
+    compile group: 'commons-io', name: 'commons-io', version: '1.3.+'
+   // compile group: 'testng', name: 'testng', version: '6.+'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.+'
+    compile group: 'net.sf.opencsv', name: 'opencsv', version: '2.+'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+test {
+    useTestNG(){
+        options.suites("testng.xml")
+        useDefaultListeners = true
+    }
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
