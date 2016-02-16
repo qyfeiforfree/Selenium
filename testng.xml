@@ -3,6 +3,7 @@
     <test name="SeleniumTestCase">
         <classes>
             <class name="org.qiyanfei.SeleniumTest.SeleniumTest"/>
+            <class name="org.qiyanfei.SeleniumTest.SeleniumTestCase1"/>
         </classes>
     </test>
 </suite>
