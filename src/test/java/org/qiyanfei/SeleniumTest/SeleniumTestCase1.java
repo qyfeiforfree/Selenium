@@ -20,7 +20,6 @@ public class SeleniumTestCase1 {
     @BeforeClass
     public void setUp() throws Exception {
         //   System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-
     }
 
     @Test
