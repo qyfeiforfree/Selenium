@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import java.io.File;
 
 /**
@@ -19,12 +20,13 @@ public class SeleniumTestCase1 {
     @BeforeClass
     public void setUp() throws Exception {
         //   System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-        driver = new FirefoxDriver();
-        baseUrl = "http://www.baidu.com/";
+
     }
 
     @Test
     public void testSearchCase() throws Exception {
+        driver = new FirefoxDriver();
+        baseUrl = "http://www.baidu.com/";
         driver.get(baseUrl);
         Thread.sleep(1000);
         WebElement input = driver.findElement(By.id("kw"));
