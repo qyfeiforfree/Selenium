@@ -37,9 +37,9 @@ public class SeleniumTestCase1 {
         Assert.assertTrue(driver.getTitle().contains("Selenium"), "Title is incorrect.");
         System.out.println(driver.getTitle());
         //截图
-        File screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File screenShotPageFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         //保存
-        FileUtils.copyFile(screenShotFile, new File("D:/SeleniumTestCase1.png"));
+        FileUtils.copyFile(screenShotPageFile, new File("D:/SeleniumTestCase1.png"));
     }
 
 
