@@ -39,7 +39,7 @@ public class SeleniumTestCase1 {
         //截图
         File screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         //保存
-        FileUtils.copyFile(screenShotFile, new File("D:/test.png"));
+        FileUtils.copyFile(screenShotFile, new File("D:/SeleniumTestCase1.png"));
     }
 
 
