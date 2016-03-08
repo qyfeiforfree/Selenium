@@ -2,8 +2,10 @@
 <suite name="SeleniumTest" parallel="false">
     <test name="SeleniumTestCase">
         <classes>
-            <class name="org.qiyanfei.SeleniumTest.SeleniumTest"/>
-            <class name="org.qiyanfei.SeleniumTest.SeleniumTestCase1"/>
+         <class name="org.qiyanfei.SeleniumTest.Testngcase1"/>
+         <class name="org.qiyanfei.SeleniumTest.SeleniumTest"/>
+         <class name="org.qiyanfei.SeleniumTest.SeleniumTestCase1"/>
+
         </classes>
     </test>
 </suite>
